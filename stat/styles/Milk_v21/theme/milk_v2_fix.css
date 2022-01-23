@@ -1,0 +1,93 @@
+/* ###################################### */
+dd.posts, dd.topics, dd.views, dd.extra,
+dd.mark, dd.simpleposts { width: 70px; }
+dd.lastpost, dd.time { min-width: 200px; }
+/* برطرف کردن مشکل نمایش ندادن گزینه‌ها در، کنترل پنل کاربری => گروه های کاربری => مدیریت گروه‌ها => فهرست گروه‌ها  */
+dd.option {
+	width: 125px;
+	line-height: 200%;
+	text-align: center;
+	font-size: 1.1em;
+}
+/* مشکل در نمایش  متن "گزارش دهنده" در کنترل پنل مدیر انجمن => پیام های گزارش شده => ... درون سربرگ فهرست گزارشات */
+dd.moderation { min-width: 260px; }
+dd.info,
+li.header dd.moderation { font-size: 1.2em; }
+/* در نمایش سربرگ فهرست موضوعات و محتویات ان ۲۲ پیکسل اختلاف وجود دارد */
+.rtl ul.topiclist dt { margin-left: -415px; }
+.rtl ul.topiclist dt .list-inner { margin-left: 415px; }
+
+.rtl ul.topiclist li.header dt { margin-left: -437px; }
+.rtl ul.topiclist li.header dt .list-inner { margin-left: 437px; }
+/* مشکل در نمایش کنترل پنل کاربری => تنظیمات کلی => مدیریت عضویت در انجمن ها => موضوعات عضو شده، سربرگ در فهرست موضوعات درست نشان داده نمیشد. این مشکل بخواطر خط ۵۱ فایل content.css در قالب Milk_v2 است. البته این کد برای محتویات درون فهرست در فایل bidi.css خط ۳۶۷ در قالب Milk_v2 اضافه شده است ولی برای سربرگ خیر.  */
+.rtl ul.topiclist.missing-column dt {
+	margin-right: 0; margin-left: -345px; }
+.rtl ul.topiclist.missing-column dt .list-inner {
+	margin-right: 0; margin-left: 345px; }
+	
+.rtl ul.topiclist.missing-column li.header dt {
+	margin-right: 0; margin-left: -357px; }
+.rtl ul.topiclist.missing-column li.header dt .list-inner {
+	margin-right: 0; margin-left: 357px; }
+
+.rtl ul.topiclist.two-columns dt {
+	margin-right: 0; margin-left: -70px; }
+.rtl ul.topiclist.two-columns dt .list-inner {
+	margin-right: 0; margin-left: 70px; }
+	
+.rtl ul.topiclist.two-columns li.header dt {
+	margin-right: 0; margin-left: -82px; }
+.rtl ul.topiclist.two-columns li.header dt .list-inner {
+	margin-right: 0; margin-left: 82px; }
+/* برطرف کردن مشکل نمایش ندادن "گزینه" در، کنترل پنل کاربری => گروه های کاربری => مدیریت گروه‌ها => سربرگ فهرست گروه ها  */
+.rtl ul.topiclist.two-long-columns dt {
+	margin-right: 0; margin-left: -250px; }
+.rtl ul.topiclist.two-long-columns dt .list-inner {
+	margin-right: 0; margin-left: 250px; }
+	
+.rtl ul.topiclist.two-long-columns li.header dt {
+	margin-right: 0; margin-left: -262px; }
+.rtl ul.topiclist.two-long-columns li.header dt .list-inner {
+	margin-right: 0; margin-left: 262px; }
+
+@media screen and (min-width: 701px) and (max-width: 991px) {
+    .rtl ul.topiclist dt { margin-left: -345px; }
+    .rtl ul.topiclist dt .list-inner,
+    .rtl ul.topiclist.missing-column dt .list-inner { margin-left: 345px; }
+/* خط بالا ".rtl ul.topiclist.missing-column dt .list-inner" برای بازنویسی کردن خط ۳۸۷ فایل bidi.css در قالب  Milk_v2 برای مشکل در نمایش محتویات فهرست موضوعات در کنترل پنل کاربری اضافه شد */
+
+    .rtl ul.topiclist li.header dt { margin-left: -367px; }
+    .rtl ul.topiclist li.header dt .list-inner { margin-left: 367px; }
+/* مخفی کردن پست ها و بازدید ها برای بیشتر کردن فضا برای عنوان موضوعات */
+    .forabg dd.posts ,
+    .forumbg dd.views {display: none;}
+}
+/* کد پایین در خط ۹۹۵ فایل bidi.css در قالب  Milk_v2 تکرار شده است ولی به علت کد های قالب دهی بالا ان کد ها نادیده گرفته میشوند. */
+@media screen and (max-width: 700px) {
+    .rtl ul.topiclist dt,
+    .rtl ul.topiclist dt .list-inner,
+    .rtl ul.topiclist.missing-column dt .list-inner { margin-left: 0; }
+}
+.rtl .dropdown-contents > li { padding-left: 0;}
+.rtl .search-box a.button-search-end { padding: 0 9px; }
+.dropdown-contents #forum-search input.sidebar_search { width: 165px;}
+.dropdown-contents .search-box {
+    float: none;
+    width: 210px;
+    margin-bottom: 15px;
+}
+/* اضافه کردن کد زیر برای گرد کردن گوشه های نوار سربرگ(برای زیبایی، الزامی نیست) */
+/*.headerbar,
+.headerbar_overlay_container { border-radius: 10px; }*/
+/* اضافه کردن کد زیر برای گرد کردن گوشه های لیست موضوعات و لیست انجمن ها و اطلاعات در حالت تاریک(باعث مشکل در نمایش میشود) */
+.forabg, .forumbg { border-radius: 10px 10px 0 0; }
+
+/* ###################################### */
+.fd_dark a,
+.fd_dark .tabs .tab > a  { color: #bec4c9; }
+.fd_dark a:hover  { color: #5fc3e4; }
+/* زیبایی: هنگام hover کردن روی دکمه رفتن به تنظیمات پیشرفته */
+/*.fd_dark .button:hover .icon { color: #5fc3e4 !important; }*/
+/* زیبایی: نمایش بهتر سربرگ کنترل پنل کاربری در حالت تاریک */
+.fd_dark .tabs .activetab > a { border-bottom: none; margin-top: 1px;}
+.fd_dark .bg3 { border-top: none;}

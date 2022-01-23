@@ -1,0 +1,41 @@
+{
+	"name": "ubuntuir/stat",
+	"type": "phpbb-extension",
+	"description": "Header and Footer for ubuntu.ir's froum",
+	"homepage": "http://www.php-bb.ir",
+	"version": "0.1",
+	"keywords": ["phpbb", "ubuntu"],
+	"time": "2021-08-21",
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Meis2M",
+			"email": "meis2m@yahoo.com",
+			"homepage": "https://www.phpbb.com/community/memberlist.php?mode=viewprofile&u=1236845",
+			"role": "Developer"
+		},
+		{
+			"name": "eshagh",
+			"email": "eshagh094@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=7.1.0"
+	},
+        "require-dev": {
+                "phpbb/epv": "dev-master"
+        },
+	"extra": {
+		"display-name": "Ubuntu Style",
+		"soft-require": {
+			"phpbb/phpbb": "3.2.*@dev"
+		},
+                "version-check": {
+                "host": "",
+                "directory": "",
+                "filename": "",
+				"ssl": true
+            }
+	}
+}

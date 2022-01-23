@@ -1,0 +1,348 @@
+/* ###################################### */
+dd.posts, dd.topics, dd.views, dd.extra,
+dd.mark, dd.simpleposts { width: 70px; }
+dd.lastpost, dd.time { min-width: 200px; }
+/* برطرف کردن مشکل نمایش ندادن گزینه‌ها در، کنترل پنل کاربری => گروه های کاربری => مدیریت گروه‌ها => فهرست گروه‌ها  */
+dd.option {
+	width: 125px;
+	line-height: 200%;
+	text-align: center;
+	font-size: 1.1em;
+}
+/* مشکل در نمایش  متن "گزارش دهنده" در کنترل پنل مدیر انجمن => پیام های گزارش شده => ... درون سربرگ فهرست گزارشات */
+dd.moderation { min-width: 260px; }
+dd.info,
+li.header dd.moderation { font-size: 1.2em; }
+/* در نمایش سربرگ فهرست موضوعات و محتویات ان ۲۲ پیکسل اختلاف وجود دارد */
+.rtl ul.topiclist dt { margin-left: -415px; }
+.rtl ul.topiclist dt .list-inner { margin-left: 415px; }
+
+.rtl ul.topiclist li.header dt { margin-left: -437px; }
+.rtl ul.topiclist li.header dt .list-inner { margin-left: 437px; }
+/* مشکل در نمایش کنترل پنل کاربری => تنظیمات کلی => مدیریت عضویت در انجمن ها => موضوعات عضو شده، سربرگ در فهرست موضوعات درست نشان داده نمیشد. این مشکل بخواطر خط ۵۱ فایل content.css در قالب Milk_v2 است. البته این کد برای محتویات درون فهرست در فایل bidi.css خط ۳۶۷ در قالب Milk_v2 اضافه شده است ولی برای سربرگ خیر.  */
+.rtl ul.topiclist.missing-column dt {
+	margin-right: 0; margin-left: -345px; }
+.rtl ul.topiclist.missing-column dt .list-inner {
+	margin-right: 0; margin-left: 345px; }
+	
+.rtl ul.topiclist.missing-column li.header dt {
+	margin-right: 0; margin-left: -357px; }
+.rtl ul.topiclist.missing-column li.header dt .list-inner {
+	margin-right: 0; margin-left: 357px; }
+
+.rtl ul.topiclist.two-columns dt {
+	margin-right: 0; margin-left: -70px; }
+.rtl ul.topiclist.two-columns dt .list-inner {
+	margin-right: 0; margin-left: 70px; }
+	
+.rtl ul.topiclist.two-columns li.header dt {
+	margin-right: 0; margin-left: -82px; }
+.rtl ul.topiclist.two-columns li.header dt .list-inner {
+	margin-right: 0; margin-left: 82px; }
+/* برطرف کردن مشکل نمایش ندادن "گزینه" در، کنترل پنل کاربری => گروه های کاربری => مدیریت گروه‌ها => سربرگ فهرست گروه ها  */
+.rtl ul.topiclist.two-long-columns dt {
+	margin-right: 0; margin-left: -250px; }
+.rtl ul.topiclist.two-long-columns dt .list-inner {
+	margin-right: 0; margin-left: 250px; }
+	
+.rtl ul.topiclist.two-long-columns li.header dt {
+	margin-right: 0; margin-left: -262px; }
+.rtl ul.topiclist.two-long-columns li.header dt .list-inner {
+	margin-right: 0; margin-left: 262px; }
+
+@media screen and (min-width: 701px) and (max-width: 991px) {
+    .rtl ul.topiclist dt { margin-left: -345px; }
+    .rtl ul.topiclist dt .list-inner,
+    .rtl ul.topiclist.missing-column dt .list-inner { margin-left: 345px; }
+/* خط بالا ".rtl ul.topiclist.missing-column dt .list-inner" برای بازنویسی کردن خط ۳۸۷ فایل bidi.css در قالب  Milk_v2 برای مشکل در نمایش محتویات فهرست موضوعات در کنترل پنل کاربری اضافه شد */
+
+    .rtl ul.topiclist li.header dt { margin-left: -367px; }
+    .rtl ul.topiclist li.header dt .list-inner { margin-left: 367px; }
+/* مخفی کردن پست ها و بازدید ها برای بیشتر کردن فضا برای عنوان موضوعات */
+    .forabg dd.posts ,
+    .forumbg dd.views {display: none;}
+}
+/* کد پایین در خط ۹۹۵ فایل bidi.css در قالب  Milk_v2 تکرار شده است ولی به علت کد های قالب دهی بالا ان کد ها نادیده گرفته میشوند. */
+@media screen and (max-width: 700px) {
+    .rtl ul.topiclist dt,
+    .rtl ul.topiclist dt .list-inner,
+    .rtl ul.topiclist.missing-column dt .list-inner { margin-left: 0; }
+}
+.rtl .dropdown-contents > li { padding-left: 0;}
+.rtl .search-box a.button-search-end { padding: 0 9px; }
+.dropdown-contents #forum-search input.sidebar_search { width: 165px;}
+.dropdown-contents .search-box {
+    float: none;
+    width: 210px;
+    margin-bottom: 15px;
+}
+/* اضافه کردن کد زیر برای گرد کردن گوشه های نوار سربرگ(برای زیبایی، الزامی نیست) */
+/*.headerbar,
+.headerbar_overlay_container { border-radius: 10px; }*/
+/* اضافه کردن کد زیر برای گرد کردن گوشه های لیست موضوعات و لیست انجمن ها و اطلاعات در حالت تاریک(باعث مشکل در نمایش میشود) */
+.forabg, .forumbg { border-radius: 10px 10px 0 0; }
+
+/* ###################################### */
+.fd_dark a,
+.fd_dark .tabs .tab > a  { color: #bec4c9; }
+.fd_dark a:hover  { color: #5fc3e4; }
+/* زیبایی: هنگام hover کردن روی دکمه رفتن به تنظیمات پیشرفته */
+/*.fd_dark .button:hover .icon { color: #5fc3e4 !important; }*/
+/* زیبایی: نمایش بهتر سربرگ کنترل پنل کاربری در حالت تاریک */
+.fd_dark .tabs .activetab > a { border-bottom: none; margin-top: 1px;}
+.fd_dark .bg3 { border-top: none;}
+
+
+
+/*----------
+--navbar --
+----------*/
+.u-navbar {
+  color: #f7f7f7;
+  font-weight: 300;
+  line-height: 1.5rem;
+  background: #333;
+}
+
+.u-navbar__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 68rem;
+  padding: 0 1.5rem;
+}
+
+@media screen and (max-width: 55rem) {
+  .u-navbar__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+  }
+  .u-navbar__ubuntu-logo {
+    width: 100%;
+  }
+}
+
+.u-navbar--list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.u-navbar--list--link {
+  display: inline-block;
+}
+
+.u-navbar--list--a {
+  color: #f7f7f7;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.u-navbar__ubuntu-logo {
+  background: #e95420;
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+}
+
+.u-navbar__ubuntu-logo--svg {
+  vertical-align: middle;
+}
+
+.u-navbar--list--a {
+  padding: 1rem;
+}
+
+.u-navbar--list--a:hover {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+/*----------
+-- Footer --
+----------*/
+.u-footer {
+  position: relative;
+  padding: 2.5rem 0;
+  background-color: #fff;
+}
+.fd_dark .u-footer{
+  background-color: #171b24;
+}
+/*top border*/
+.u-footer::before {
+  height: 0.1875rem;
+  width: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #e95420;
+  content: "";
+  position: absolute;
+}
+
+.u-footer__row {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 68rem;
+  margin: auto;
+}
+
+.u-footer--nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.u-footer--nav--part:not(:last-child) {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.u-footer--title {
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0 0 0.25rem;
+  margin: 0;
+}
+
+.u-footer--title > a {
+  color: inherit;
+}
+
+.u-footer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.u-footer-list > li {
+  display: block;
+}
+
+.u-footer-list > li > a {
+  display: block;
+  color: inherit;
+}
+
+.u-footer--divider {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #d9d9d9;
+  border-collapse: separate;
+  height: 0;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 55rem) {
+  .u-footer__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .u-footer__row--content {
+    width: 60%;
+  }
+  .u-footer__row--social {
+    width: 40%;
+  }
+  .social-icons {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+.u-inline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.u-inline-list--item {
+  display: inline-block;
+}
+
+.u-inline-list--link {
+  display: inline-block;
+  color: inherit;
+  padding: 0.5rem 0.25rem;
+}
+
+.u-footer--copyright-text {
+  margin: 1.5rem 0 0;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-icons--link {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  margin-left: 1rem;
+  background: #666;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.social--svg-icon {
+  width: 1em;
+  height: 1em;
+  fill: #fff;
+  vertical-align: middle;
+}
+.u-footer--go-top {
+  display: none;
+}
+
+.u-footer--go-top--link {
+  color: #666;
+  padding: 0.5rem 1.5rem;
+  display: block;
+}
+.u-footer--go-top--icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+@media screen and (max-width: 55rem) {
+  .u-footer {
+    padding-top: 0;
+  }
+  .u-footer--go-top {
+    display: block;
+    margin: 0 0 1rem;
+    border-bottom: 1px solid #666;
+  }
+  .u-inline-list--link,
+  .u-inline-list--item {
+    display: block;
+    padding: 0;
+    font-size: 0.875rem;
+  }
+  .social-icons {
+    margin-top: 1rem;
+  }
+}
+
+
